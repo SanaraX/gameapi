@@ -35,10 +35,9 @@ const gamesOwned = require("./games_owned")
 
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/index.html'))
+app.get('/index', (req, res) => {
+    res.sendFile(path.join(__dirname + '/welcome.html'))
 })
-
 // GAME OPERATIONS END POINTS
 app.get("/game/", games.getAllGames);
 app.post("/game/", games.postGame);
