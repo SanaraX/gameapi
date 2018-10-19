@@ -1,5 +1,5 @@
 // 
-console.log('Loaded')
+console.log('Games script loaded')
 // function something(text) {
 //     var newDiv = document.createElement("div");
 //     var newContent = document.createTextNode(text); 
