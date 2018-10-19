@@ -7,20 +7,213 @@
 </head>
 
 <body>
-Hello
-
-<div id = "consoleForm">
+<!--CONSOLE DIVS-->
+<div id = "getConsoleForm">
     <form onsubmit="return false">
         <div>
-            <label for="getConsole">Get Console: </label>
-            <input type="text" id="getConsole" name="get_console">
+            <label for="getConsoleForm">Get Console: </label>
+            <input type="text" id="getConsoleId" name="get_console">
         </div>
         <div class="button">
-            <button onclick="alertFunction()">Find your Console</button>
+            <button onclick="getConsoleFunction()">Find your Console</button>
         </div>
     </form>
-<div>
-    <script src="/index.js"></script>
+</div> <br/>
+<div id = "insertConsoleForm">
+    <form onsubmit="return false">
+        <div>
+            <label for="insertConsoleForm">Insert Console: </label> <br/>
+
+            <label for="insertConsoleName">Name: </label>
+            <input type="text" id="insertConsoleName" name="insert_console_name"> <br/>
+
+            <label for="insertConsoleDate">Release Date: </label>
+            <input type="text" id="insertConsoleDate" name="insert_console_date"> <br/>
+
+            <label for="insertConsoleBrand">Brand: </label>
+            <input type="text" id="insertConsoleBrand" name="insert_console_brand">
+        </div>
+        <div class="button">
+            <button onclick="insertConsoleFunction()">Insert your Console</button>
+        </div>
+    </form>
+<div> <br/>
+<div id = "updateConsoleForm">
+    <form onsubmit="return false">
+        <div>
+            <label for="updateConsoleForm">Update Console: </label> 
+            <input type="text" id="updateConsoleId" name="update_console"> <br/>
+
+            <label for="updateConsoleName">Name: </label>
+            <input type="text" id="updateConsoleName" name="update_console_name"> <br/>
+
+            <label for="updateConsoleDate">Release Date: </label>
+            <input type="text" id="updateConsoleDate" name="update_console_date"> <br/>
+
+            <label for="updateConsoleBrand">Brand: </label>
+            <input type="text" id="updateConsoleBrand" name="update_console_brand">
+        </div>
+        <div class="button">
+            <button onclick="updateConsoleFunction()">Update your Console</button>
+        </div>
+    </form>
+</div> <br/>
+<div id = "deleteConsoleForm">
+    <form onsubmit="return false">
+        <div>
+            <label for="deleteConsoleForm">Delete Console: </label>
+            <input type="text" id="deleteConsoleId" name="delete_console">
+        </div>
+        <div class="button">
+            <button onclick="deleteConsoleFunction()">Find your Console</button>
+        </div>
+    </form>
+</div> <br/>
+<!--GAME DIVS-->
+<div id = "getGameForm">
+    <form onsubmit="return false">
+        <div>
+            <label for="getGameForm">Get Game: </label>
+            <input type="text" id="getGameId" name="get_game">
+        </div>
+        <div class="button">
+            <button onclick="getGameFunction()">Find your Game</button>
+        </div>
+    </form>
+</div> <br/>
+<div id = "insertGameForm">
+    <form onsubmit="return false">
+        <div>
+            <label for="insertGameForm">Insert Game: </label> <br/>
+
+            <label for="insertGameName">Name: </label>
+            <input type="text" id="insertGameName" name="insert_game_name"> <br/>
+
+            <label for="insertGameConsoleId">Console ID: </label>
+            <input type="text" id="insertGameConsoleId" name="insert_game_consoleid"> <br/>
+
+            <label for="insertGameDate">Release Date: </label>
+            <input type="text" id="insertGameDate" name="insert_game_date"> <br/>
+
+            <label for="insertGameGenre">Genre: </label>
+            <input type="text" id="insertGameGenre" name="insert_game_genre">
+        </div>
+        <div class="button">
+            <button onclick="insertGameFunction()">Insert your Game</button>
+        </div>
+    </form>
+<div> <br/>
+<div id = "updateGameForm">
+    <form onsubmit="return false">
+        <div>
+            <label for="updateGameForm">Update Game: </label>
+            <input type="text" id="updateGameId" name="update_game"> <br/>
+
+            <label for="updateGameName">Name: </label>
+            <input type="text" id="updateGameName" name="update_game_name"> <br/>
+
+            <label for="updateGameConsoleId">Console ID: </label>
+            <input type="text" id="updateGameConsoleId" name="update_game_consoleid"> <br/>
+
+            <label for="updateGameDate">Release Date: </label>
+            <input type="text" id="updateGameDate" name="update_game_date"> <br/>
+
+            <label for="updateGameGenre">Genre: </label>
+            <input type="text" id="updateGameGenre" name="update_game_genre">
+        </div>
+        <div class="button">
+            <button onclick="updateGameFunction()">Update your Game</button>
+        </div>
+    </form>
+<div> <br/>
+<div id = "deleteGameForm">
+    <form onsubmit="return false">
+        <div>
+            <label for="deleteGameForm">Delete Game: </label>
+            <input type="text" id="deleteGameId" name="delete_game">
+        </div>
+        <div class="button">
+            <button onclick="deleteGameFunction()">Find your Game</button>
+        </div>
+    </form>
+</div> <br/>
+<!--CONSOLE OWNED DIVS-->
+<div id = "getConsoleOwnedForm">
+    <form onsubmit="return false">
+        <div>
+            <label for="getConsoleOwnedForm">Get Console Owned: </label>
+            <input type="text" id="getConsoleOwnedId" name="get_console_owned">
+        </div>
+        <div class="button">
+            <button onclick="getConsoleOwnedFunction()">Find your Game</button>
+        </div>
+    </form>
+</div> <br/>
+<div id = "insertConsoleOwnedForm">
+    <form onsubmit="return false">
+        <div>
+            <label for="insertConsoleOwnedForm">Insert Console Owned: </label> <br/>
+
+            <label for="insertConsoleOwnedConsoleId">Console ID: </label>
+            <input type="text" id="insertConsoleOwnedConsoleId" name="insert_console_owned_console_id"> <br/>
+
+            <label for="insertConsoleOwnedPurchasePrice">Purchase Price: </label>
+            <input type="text" id="insertConsoleOwnedPurchasePrice" name="insert_console_owned_purchase_price"> <br/>
+
+            <label for="insertConsoleOwnedMarketPrice">Market Price: </label>
+            <input type="text" id="insertConsoleOwnedMarketPrice" name="insert_console_owned_market_price"> <br/>
+
+            <label for="insertConsoleOwnedCondition">Condition: </label>
+            <input type="text" id="insertConsoleOwnedCondition" name="insert_console_owned_condition"> <br/>
+
+            <label for="insertConsoleOwnedDate">Date: </label>
+            <input type="text" id="insertConsoleOwnedDate" name="insert_console_owned_date">
+        </div>
+        <div class="button">
+            <button onclick="insertConsoleOwnedFunction()">Insert your Console</button>
+        </div>
+    </form>
+<div> <br/>
+<div id = "updateConsoleOwnedForm">
+    <form onsubmit="return false">
+        <div>
+            <label for="updateConsoleOwnedForm">Update Console Owned: </label>
+            <input type="text" id="updateConsoleOwnedId" name="update_console_owned"> <br/>
+
+            <label for="updateConsoleOwnedConsoleId">Console ID: </label>
+            <input type="text" id="updateConsoleOwnedConsoleId" name="update_console_owned_console_id"> <br/>
+
+            <label for="updateConsoleOwnedPurchasePrice">Purchase Price: </label>
+            <input type="text" id="updateConsoleOwnedPurchasePrice" name="update_console_owned_purchase_price"> <br/>
+
+            <label for="updateConsoleOwnedMarketPrice">Market Price: </label>
+            <input type="text" id="updateConsoleOwnedMarketPrice" name="update_console_owned_market_price"> <br/>
+
+            <label for="updateConsoleOwnedCondition">Condition: </label>
+            <input type="text" id="updateConsoleOwnedCondition" name="update_console_owned_condition"> <br/>
+
+            <label for="updateConsoleOwnedDate">Date: </label>
+            <input type="text" id="updateConsoleOwnedDate" name="update_console_owned_date">
+        </div>
+        <div class="button">
+            <button onclick="updateConsoleOwnedFunction()">Update your Console</button>
+        </div>
+    </form>
+<div> <br/>
+<div id = "deleteConsoleOwnedForm">
+    <form onsubmit="return false">
+        <div>
+            <label for="deleteConsoleOwnedForm">Delete Console Owned: </label>
+            <input type="text" id="deleteConsoleOwnedId" name="delete_console_owned"> <br/>
+        </div>
+        <div class="button">
+            <button onclick="deleteConsoleOwnedFunction()">Delete your Console</button>
+        </div>
+    </form>
+<div> <br/>
+
+<div id = "getGameOwned">
+    <script src="/games.js"></script>
 </body>
 
 </html>

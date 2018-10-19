@@ -21,7 +21,6 @@ function queryConsoleAll() {
         });
     })
 }
-
 function queryInsertConsole(payload) {
     q = `INSERT INTO consoles (name, release_date, brand) VALUES ($name, $release_date, $brand)`
     return new Promise(function(resolve, reject) {
@@ -38,10 +37,10 @@ function queryModifyConsole(reqBody, args) {
         value = reqBody[field]
         if (!whiteList.includes(field)) return
         if (!value) return
-        inject += `${field} = $${field}`
+        if (inject == '') inject += `${field} = $${field}`
+        inject += `, ${field} = $${field}`
         args['$' + field] = value
     })
-    if (inject === '') res.send('missing post params')
     query = `UPDATE consoles SET ${inject} WHERE id = $id`
     return new Promise(function(resolve, reject) {
         db.run(query, args, function(err) {
@@ -102,7 +101,7 @@ async function deleteConsole(req, res) {
         let remove = await queryDeleteConsole(req.params.id)
         res.send(`Row ${remove} console deleted`)
     } catch (err) {
-        res.send(err.message)
+        if (err) res.send(err.message)
     }
 }
 
