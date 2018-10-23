@@ -19,24 +19,27 @@
 */
 const express = require('express')
 const path = require("path")
+const bodyParser = require('body-parser')
+const consoles = require("./api/consoles")
+const games = require("./api/games")
+const consolesOwned = require("./api/consoles_owned")
+const gamesOwned = require("./api/games_owned")
 const app = express()
 const port = 3004;
 // !! Required to handle HTTP POST requests, extracts body portion of 
 // incoming request and exposes it on req.body
-const bodyParser = require('body-parser')
 app.use(bodyParser.json());                         // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
-const consoles = require("./consoles")
-const games = require("./games")
-const consolesOwned = require("./consoles_owned")
-const gamesOwned = require("./games_owned")
 // Root request everytime page is refreshed or loaded
 // req/res are the functions executed when the route is matched
 
 app.use(express.static('public'))
 
-app.get('/index', (req, res) => {
-    res.sendFile(path.join(__dirname + '/welcome.html'))
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/views/index.html'))
+})
+app.get('/api/games/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/public/games.html'))
 })
 // GAME OPERATIONS END POINTS
 app.get("/game/", games.getAllGames);
