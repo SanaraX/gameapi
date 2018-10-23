@@ -18,6 +18,9 @@ function getConsoleFunction() {
     })
     .catch( (error) => { console.log(error) })
 }
-// function insertConsoleFunction() {
-//     let name = document.getElementById('')
-// }
+function insertConsoleFunction() {
+    let name = document.getElementById('insertConsoleName').value
+    let date = document.getElementById('insertConsoleDate').value
+    let brand = document.getElementById('insertConsoleBrand').value
+    fetch('/console/')
+}
